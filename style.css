@@ -117,7 +117,7 @@ header {
 }
 
 .left-content {
-    width: 25%;
+    width: 20%;
     text-align: center;
 }
 
@@ -182,7 +182,7 @@ header {
 }
 
 .right-content {
-    width: 75%;
+    width: 80%;
 }
 
 .heading-container {
@@ -224,7 +224,7 @@ header {
 }
 
 .right-chat-container {
-    width: 70%;
+    width: 70%;display: flex;flex-direction: column;
 }
 
 .chat-heading {
@@ -301,6 +301,7 @@ display: flex;flex-direction: column;
     width: 10px;
     height: 10px;
     vertical-align: bottom;
+    padding-right: 5px; 
 }
 
 .replies .feather:first-child {
@@ -317,7 +318,7 @@ display: flex;flex-direction: column;
 }
 
 .chat-header ul li {
-    padding: 10px 20px;
+    padding: 15px 20px;
     color: grey;
     font-size: 0.9em;
 }
@@ -341,7 +342,7 @@ display: flex;flex-direction: column;
 .chat-content {
     display: flex;
     padding: 0 15px 10px;
-    border-bottom: 1px solid #80808038;
+   
 }
 
 .me-tetx p,
@@ -352,11 +353,12 @@ display: flex;flex-direction: column;
 
 
 .chat-footer {
+    border-top: 1px solid #80808038;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: relative;    margin-top: auto;
 }
 
 .format-btn,
@@ -453,9 +455,15 @@ display: flex;flex-direction: column;
 }
 
 #tab-ul a,
-#tab-ul a:hover,
-#tab-ul a:active {
+#tab-ul a:active,
+#tab-ul a:hover {
     text-decoration: none;
+}
+#tab-ul a:active .tab-text,
+#tab-ul a:hover .tab-text{color:black;}
+#tab-ul a:hover .feather,
+#tab-ul a:active .feather {
+    color: #e7877d;
 }
 
 #tab-line {
@@ -482,14 +490,17 @@ display: flex;flex-direction: column;
     background-color: #fef9f8;
     position: relative;
     border-radius: 4px;
+    color: #e7877d;
+    font-size: 0.8em;
+    padding: 15px;
 }
 
-.box:after {
+.box:after{
     content: "";
     display: block;
     border-width: 20px 20px 0;
     border-style: solid;
-    border-color: #fef9f8 transparent transparent;
+    border-color: transparent transparent transparent;
     margin-left: - 300px;
     position: absolute;
     bottom: - 300px;
@@ -518,12 +529,17 @@ display: flex;flex-direction: column;
     left: auto;
     right: -17px;
 }
+
 .me-text,
 .friend-text {
     padding: 0 10px;
 }
-.me-text >*,
-.friend-text>*{padding-bottom: 10px;}
+
+.me-text p+p, .me-text p+div,
+.friend-text p+div,.friend-text p+p {
+    padding-top: 10px;
+}
+
 .item-img {
     display: flex;
 }
@@ -543,4 +559,5 @@ display: flex;flex-direction: column;
     width: 60px;
     height: 35px;
     border-radius: 6px;
+    margin: 0 7px 7px 7px;
 }
