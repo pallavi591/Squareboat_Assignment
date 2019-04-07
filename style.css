@@ -224,7 +224,9 @@ header {
 }
 
 .right-chat-container {
-    width: 70%;display: flex;flex-direction: column;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
 }
 
 .chat-heading {
@@ -301,7 +303,7 @@ display: flex;flex-direction: column;
     width: 10px;
     height: 10px;
     vertical-align: bottom;
-    padding-right: 5px; 
+    padding-right: 5px;
 }
 
 .replies .feather:first-child {
@@ -341,8 +343,9 @@ display: flex;flex-direction: column;
 
 .chat-content {
     display: flex;
-    padding: 0 15px 10px;
-   
+    padding: 0 45px 10px;
+    flex-direction: column;
+    position: relative;
 }
 
 .me-tetx p,
@@ -358,7 +361,8 @@ display: flex;flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;    margin-top: auto;
+    position: relative;
+    margin-top: auto;
 }
 
 .format-btn,
@@ -459,8 +463,12 @@ display: flex;flex-direction: column;
 #tab-ul a:hover {
     text-decoration: none;
 }
+
 #tab-ul a:active .tab-text,
-#tab-ul a:hover .tab-text{color:black;}
+#tab-ul a:hover .tab-text {
+    color: black;
+}
+
 #tab-ul a:hover .feather,
 #tab-ul a:active .feather {
     color: #e7877d;
@@ -485,7 +493,7 @@ display: flex;flex-direction: column;
 } */
 
 .box {
-    width: 300px;
+    width: 305px;
     height: auto;
     background-color: #fef9f8;
     position: relative;
@@ -495,7 +503,7 @@ display: flex;flex-direction: column;
     padding: 15px;
 }
 
-.box:after{
+.box:after {
     content: "";
     display: block;
     border-width: 20px 20px 0;
@@ -530,15 +538,17 @@ display: flex;flex-direction: column;
     right: -17px;
 }
 
-.me-text,
+/* .me-text,
 .friend-text {
     padding: 0 10px;
-}
+} */
 
-.me-text p+p, .me-text p+div,
-.friend-text p+div,.friend-text p+p {
+/* .me-text p+p,
+.me-text p+div,
+.friend-text p+div,
+.friend-text p+p {
     padding-top: 10px;
-}
+} */
 
 .item-img {
     display: flex;
@@ -560,4 +570,44 @@ display: flex;flex-direction: column;
     height: 35px;
     border-radius: 6px;
     margin: 0 7px 7px 7px;
+}
+
+.logo-container-page {
+    display: flex;
+    justify-content: center;
+    /* width: 30px; */
+    opacity: 0.3;
+}
+
+.m-text {
+    align-self: flex-end;
+}
+
+.fri-text {
+    align-self: flex-start;
+}
+
+.chat-content p,
+.chat-content div {
+    margin-top: 25px;
+}
+
+.img-seen {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.fri-seen,
+.m-seen {
+    position: absolute;
+   
+}
+
+.fri-seen {
+    left: 6px; top: 304px;
+}
+
+.m-seen {
+    right: 6px; top: 304px;
 }

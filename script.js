@@ -40,5 +40,11 @@ $("#tab-ul li")
     }
   );
 
+var mtopEle= $('.m-text.msg-seen');
+var topform=mtopEle.position().top+mtopEle.height()+10;
+var ftopEle= $('.fri-text.msg-seen');
+var topforfri=ftopEle.position().top+ftopEle.height();
 
+$('.m-seen').css({'top':topform});
+$('.fri-seen').css({'top':topforfri});
 })
